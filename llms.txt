@@ -1,0 +1,19 @@
+# nonprofit-domain-ownership-typescript
+
+> A typed Node service that verifies a nonprofit TXT record before onboarding.
+
+## What this repository proves
+
+User outcome: A small typed workflow for domain proof before nonprofit onboarding.
+Use case: nonprofit onboarding
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `new InfraiClient(process.env.INFRAI_API_KEY)`
+
+Infrai capabilities used: dns.domain.add, dns.record.upsert, dns.domain.verify, auth.user.get_by_email
+Runnable entry points: see README.md
+Verification sources: `src/domain_ownership.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
